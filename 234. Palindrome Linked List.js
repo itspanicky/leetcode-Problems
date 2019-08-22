@@ -19,6 +19,7 @@
 //  * @return {boolean}
 //  */
 
+// 1
 function isPalindrome(head) {
     if (!head || !head.next) return true;
 
@@ -33,3 +34,34 @@ function isPalindrome(head) {
 
     return str === reverseStr
 }
+// Runtime: 64 ms, faster than 65.56 % of JavaScript online submissions for Palindrome Linked List.
+// Memory Usage: 49 MB, less than 20.00 % of JavaScript online submissions for Palindrome Linked List.
+
+// 2
+function isPalindrome(head) {
+    if (!head || !head.next) return true;
+    let firstHalf = ""
+    let secondHalf = ""
+
+    let slow = head
+    let fast = head
+
+    while (fast && fast.next) {
+        firstHalf += slow.val
+        slow = slow.next
+        fast = fast.next.next
+
+        if (fast && !fast.next) {
+            firstHalf += slow.val
+        }
+    }
+
+    while (slow) {
+        secondHalf = slow.val + secondHalf
+        slow = slow.next
+    }
+
+    return firstHalf === secondHalf
+}
+// Runtime: 64 ms, faster than 65.53 % of JavaScript online submissions for Palindrome Linked List.
+// Memory Usage: 41.9 MB, less than 20.00 % of JavaScript online submissions for Palindrome Linked List.
