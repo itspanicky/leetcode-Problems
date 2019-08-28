@@ -38,3 +38,5 @@ var mergeTwoLists = function(l1, l2) {
 
     return result.next
 };
+// Runtime: 72 ms, faster than 25.90 % of JavaScript online submissions for Merge Two Sorted Lists.
+// Memory Usage: 36 MB, less than 17.95 % of JavaScript online submissions for Merge Two Sorted Lists.
