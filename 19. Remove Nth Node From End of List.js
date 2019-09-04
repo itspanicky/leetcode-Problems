@@ -27,7 +27,7 @@ var removeNthFromEnd = function(head, n) {
         fastHead = fastHead.next
     }
 
-    if (fastHead === null) return slowHead.next
+    if (fastHead === null) return slowHead.next     // ex) head = [1], n = 1, return slowHead.next = []
 
     while (fastHead.next) {
         fastHead = fastHead.next
@@ -38,3 +38,5 @@ var removeNthFromEnd = function(head, n) {
 
     return head
 };
+// Runtime: 60 ms, faster than 58.27 % of JavaScript online submissions for Remove Nth Node From End of List.
+// Memory Usage: 34.3 MB, less than 13.64 % of JavaScript online submissions for Remove Nth Node From End of List.
