@@ -10,5 +10,6 @@ function hasPathSum(root, sum) {
     return (root.left != null && hasPathSum(root.left, sum - root.val))
         || (root.right != null && hasPathSum(root.right, sum - root.val))
 }
+
 // Runtime: 56 ms, faster than 95.45 % of JavaScript online submissions for Path Sum.
 // Memory Usage: 37.2 MB, less than 88.89 % of JavaScript online submissions for Path Sum.
